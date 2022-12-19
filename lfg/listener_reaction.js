@@ -38,7 +38,7 @@ module.exports = async (reaction, user, add) =>{
                     }
                 }
                 
-                await wait(1500)
+                await wait(2500)
             } catch (error) {
                 console.error('Failed to remove reactions.');
             }
@@ -90,7 +90,7 @@ module.exports = async (reaction, user, add) =>{
                     threadChannel.members.add(user.split("@")[1].replace(">",""))
                 }
                 threadChannel.send({
-                    content: "Hey there! The group has filled. You can use any available channel under `BS DUNGEONS` group of channels to communicate during your dungeon. \n\n **Good luck and have fun!**"
+                    content: "Hey <@here>! The group has filled. You can use any available channel under `BS DUNGEONS` group of channels to communicate during your dungeon. \n\n **Good luck and have fun!**"
                 })
             }).catch(console.error);
             message.edit({embeds: [new_embed], content: ``})

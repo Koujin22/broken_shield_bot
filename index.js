@@ -99,7 +99,7 @@ client.on(Events.MessageReactionAdd, async (reaction, user)=>{
 	}
     if(reaction.message.id == "1050973948290007080" || reaction.message.id == "1050975223484252240")
 		await assign_roles(client)(reaction, user)
-	else if(reaction.message.author.tag == "Broken Shield bot#1671" && user.tag != "Broken Shield bot#1671")
+	else if(reaction.message.author.tag == "Broken Shield Bot#1671" && user.tag != "Broken Shield Bot#1671")
 		await react_lfg_handler(reaction, user, true)
 });
 
@@ -117,7 +117,7 @@ client.on(Events.MessageReactionRemove, async(reaction, user)=>{
 	}
 	if(reaction.message.id == "1050973948290007080" || reaction.message.id == "1050975223484252240")
 		await remove_roles(client)(reaction, user)
-	else if(reaction.message.author.tag == "Broken Shield bot#1671" && user.tag != "Broken Shield bot#1671")
+	else if(reaction.message.author.tag == "Broken Shield Bot#1671" && user.tag != "Broken Shield Bot#1671")
 		await react_lfg_handler(reaction, user, false)
 	
 });

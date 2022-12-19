@@ -84,14 +84,14 @@ module.exports = async (interaction) => {
                 break
             case "lfg_done":
                 const channel = interaction.guild.channels.cache.get(interaction.message.channelId)
-                const whoIAmRole = await interaction.guild.roles.cache.find(r => r.name == 'BS Member')
+                const whoIAmRole = await interaction.guild.roles.cache.find(r => r.name == 'Key Master')
                 const dungeonField = embed.fields.find(e=>e.name=='Dungeon:')
                 const levelField = embed.fields.find(e=>e.name=='Level:')
                 const rolesField = embed.fields.find(e=>e.name=="Looking for:")
                 
                 embed.footer = {}
                 
-                channel.send({content: `${NAME_TO_KEY[dungeonField.value]} ${levelField.value} <@&${whoIAmRole.id}>`,embeds:[embed]})
+                channel.send({content: `${dungeonField.value} ${levelField.value} <@&${whoIAmRole.id}>`,embeds:[embed]})
                 .then(msg =>{
                             
                     let dps = `<:Damage:800195574632022117>`
